@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // Route principale
 app.get('/', (req, res) => {
   // Vérifie si le cookie "country" est égal à "russia"
-console.log(req.cookies.country)
+  console.log(req.cookies.country)
   if (req.cookies.country === 'russia') {
     if(!req.cookies.password) return res.sendFile(__dirname + "/html/nosuperpassword.html");
     if(req.cookies.password == 'VzNsQzBtM19UMF9yMzRsMXR5') return res.sendFile(__dirname + "/html/wrong.html");
@@ -41,7 +41,7 @@ console.log(req.cookies.country)
 
 app.get('/*', (req, res) => {
   res.status(404).json({error: 404, msg: "Nice try, but no"});
-  });
+});
 
 app.listen(PORT, () => {
   console.log(clc.green(`[✓] Web Server has confirmed status`));
