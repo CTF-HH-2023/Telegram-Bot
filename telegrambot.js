@@ -6,16 +6,17 @@ const bot = new TelegramBot(token, {polling: true});
 
 const TELEGRAM_URL = process.env.TELEGRAM_URL;
 const WEBPORT = process.env.WEBPORT;
+const URL = process.env.URL;
 
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     const text = msg.text;
     
     if (text == '/start') {
-        bot.sendMessage(chatId, "Мы не принимаем просто так, поэтому, пожалуйста, пройдите через наш сайт проверки, чтобы убедиться, что вы действительно один из нас: \nhttp://X.X.X.X:"+WEBPORT+"/");
+        bot.sendMessage(chatId, "Мы не принимаем просто так, поэтому, пожалуйста, пройдите через наш сайт проверки, чтобы убедиться, что вы действительно один из нас: \n"+URL+":"+WEBPORT+"/");
     }
 
-    if (text == '/join dPsWu72M23nyL2'){
+    if (text == 'dPsWu72M23nyL2'){
         bot.sendMessage(chatId, TELEGRAM_URL);
     }
 })
