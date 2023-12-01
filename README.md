@@ -8,7 +8,7 @@ Users must understand that to become one of them, all they have to do is change 
 
 Once the cookie has been changed, the user's page will change, and the message will read "Hello friend, please add the superpassword to your configuration. Do not bruteforce, just use your brain. Doing a bruteforce will ban you from our site and group". When scanning this page, the user will find a password as a comment. If the user tries this password directly, it will be rejected with a message stating: "Haha, did you really think the password would be in plain text in the code of our super-secret app?".
 
-At this point, the user must understand that the password given is in fact encoded, and by passing it into a tool like CyberChef, the password will be decoded from Base64. All they have to do is add the "password" or "superpassword" cookie with the value, and the site will give them the password to give to the bot.
+At this point, the user must understand that the password given is in fact encoded, and by passing it into a tool like CyberChef, the password will be decoded from Base64. All they have to do is add the "superpassword" cookie with the value, and the site will give them the password to give to the bot.
 
 # Run the challenge
 ## With Docker (recommended) 
