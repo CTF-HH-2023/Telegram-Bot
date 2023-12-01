@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
   if (req.cookies.country === 'russia') {
     if(!req.cookies.password) return res.sendFile(__dirname + "/html/nosuperpassword.html");
     if(req.cookies.password == 'VzNsQzBtM19UMF9yMzRsMXR5') return res.sendFile(__dirname + "/html/wrong.html");
-    if(req.cookies.password != 'W3lC0m3_T0_r34l1ty') return res.sendFile(__dirname + "/html/no.html");
+    if(req.cookies.password != 'W3lC0m3_T0_r34l1ty' && req.cookies.superpassword != 'W3lC0m3_T0_r34l1ty') return res.sendFile(__dirname + "/html/no.html");
 
     res.sendFile(__dirname + "/html/yes.html");
   } else {
