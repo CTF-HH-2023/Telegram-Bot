@@ -31,7 +31,7 @@ npm i && node app.js
 | ENV            | Description                                                          | Required ? |
 |----------------|----------------------------------------------------------------------|------------|
 | TELEGRAM_TOKEN | The Telegram bot token                                               |      ✅     |
-| WEBPORT        | The port on which the application should listen on its local network |      ✅     |
+| WEBPORT        | The port on which the application should listen on                   |      ✅     |
 | TELEGRAM_URL   | The URL to be returned by the bot after the player has succeeded.    |      ✅     |
 | URL            | WEB application URL, e.g. http://131.78.34.12                        |      ✅     |
 ## Responsible Team :
