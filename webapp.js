@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
   // Vérifie si le cookie "country" est égal à "russia"
   if (req.cookies.country === 'russia') {
     if(!req.cookies.superpassword) return res.sendFile(__dirname + "/html/nosuperpassword.html");
-    if(req.cookies.password == 'VzNsQzBtM19UMF9yMzRsMXR5') return res.sendFile(__dirname + "/html/wrong.html");
+    if(req.cookies.superpassword == 'VzNsQzBtM19UMF9yMzRsMXR5') return res.sendFile(__dirname + "/html/wrong.html");
     if(req.cookies.superpassword != 'W3lC0m3_T0_r34l1ty') return res.sendFile(__dirname + "/html/nosuperpassword.html");
 
     res.sendFile(__dirname + "/html/yes.html");
